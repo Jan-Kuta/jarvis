@@ -1,0 +1,25 @@
+{
+  "name": "WhenCodeHelps",
+  "version": "1.0.0",
+  "description": "Code helps us with reading",
+  "manifest_version": 3,
+  "author": "Utopenci",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["./content.js"]
+    }
+  ],
+  "action":{
+    "default_popup": "index.html",
+    "default_title": "Reading helper"
+  },
+  "icons": {
+    "128": "codeHelpsIcon.png"
+  }
+}
